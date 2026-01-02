@@ -12,7 +12,6 @@
     <title>Shattered Hopes Socials</title>
 
     <style>
-        /* Global box-sizing to prevent padding from breaking width */
         * {
             box-sizing: border-box;
         }
@@ -72,7 +71,11 @@
             border-color: #fff;
         }
 
-        /* UPDATED: Added Flexbox to center content */
+        /* Special style for Discord to make it stand out slightly */
+        .discord-btn {
+            border-color: #5865F2; 
+        }
+
         .embed-section {
             margin-top: 40px;
             width: 100%;
@@ -82,7 +85,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            overflow: hidden; /* Prevents overflow if embed is too wide */
+            overflow: hidden;
         }
         
         iframe {
@@ -108,6 +111,10 @@
         <div class="links">
             <a href="https://www.roblox.com/groups/138766802" class="link-btn" target="_blank">
                 Roblox Group
+            </a>
+
+            <a href="https://discord.gg/wCRd2gY5AE" class="link-btn discord-btn" target="_blank">
+                Official Discord Server
             </a>
             
             <a href="https://shatteredhopesrblx.miraheze.org/wiki/" class="link-btn" target="_blank">
