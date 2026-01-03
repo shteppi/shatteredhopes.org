@@ -6,185 +6,234 @@
     
     <meta property="og:title" content="Shattered Hopes - Official Socials">
     <meta property="og:description" content="Join the official channels, wiki, and community for Shattered Hopes on Roblox.">
-    <meta property="og:image" content="https://static.wikitide.net/shatteredhopesrblxwiki/thumb/b/b8/Shattered_Hopes_game_icon..png/600px-Shattered_Hopes_game_icon..png?20251206130445">
+    <meta property="og:image" content="Shattered-Hopes.png">
     <meta name="theme-color" content="#2b2b2b">
 
-    <link rel="icon" href="https://static.wikitide.net/shatteredhopesrblxwiki/thumb/b/b8/Shattered_Hopes_game_icon..png/600px-Shattered_Hopes_game_icon..png?20251206130445" type="image/png">
-
+    <link rel="icon" href="Shattered-Hopes.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <title>Shattered Hopes Socials</title>
 
     <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            
+            /* Brand Colors */
+            --roblox: #de3537;
+            --discord: #5865F2;
+            --wiki: #2980b9;
+            --x: #ffffff;
+            --tiktok: #FE2C55;
+        }
+
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            /* This gradient mimics a dark spotlight. Replace with a game screenshot if you want. */
+            background-image: radial-gradient(circle at 50% 0%, #2a2a2a 0%, #0a0a0a 70%);
+            color: var(--text-primary);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
+            justify-content: center;
+            padding: 20px;
         }
 
         .container {
-            width: 90%;
-            max-width: 600px;
+            width: 100%;
+            max-width: 480px;
             text-align: center;
-            padding: 40px 20px;
+            padding: 48px 24px;
+            
+            /* Glassmorphism Effect */
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            
+            /* Entrance Animation */
+            animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
         .profile-img {
-            width: 100px;
-            height: 100px;
-            background-color: #333;
+            width: 96px;
+            height: 96px;
             border-radius: 50%;
-            margin-bottom: 15px;
             object-fit: cover;
-            border: 2px solid #555;
+            border: 2px solid rgba(255,255,255,0.2);
+            margin-bottom: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05) rotate(5deg);
         }
 
-        h1 { margin-bottom: 5px; font-size: 1.5rem; }
-        p { color: #aaa; margin-bottom: 30px; font-size: 0.9rem; }
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
 
         .links {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            width: 100%;
+            gap: 12px;
         }
 
         .link-btn {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background-color: #2a2a2a;
-            color: white;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-primary);
             text-decoration: none;
-            padding: 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: transform 0.2s, filter 0.2s;
-            border: 1px solid rgba(255,255,255,0.1);
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            border-radius: 12px;
+            font-weight: 500;
+            border: 1px solid var(--glass-border);
+            transition: all 0.25s ease;
             position: relative;
-        }
-
-        /* Icon styling using FontAwesome */
-        .link-btn i {
-            font-size: 24px;
-        }
-
-        .link-btn:hover {
-            transform: scale(1.02);
-            filter: brightness(1.1);
-            border-color: #fff;
-        }
-
-        /* --- Custom Brand Colors --- */
-        
-        .roblox-btn {
-            background-color: #2b3036; 
-            border-left: 5px solid #de3537;
-        }
-
-        .discord-btn {
-            background-color: #5865F2;
-        }
-
-        .wiki-btn {
-            background-color: #2980b9;
-        }
-
-        .x-btn {
-            background-color: #000000;
-            border: 1px solid #333;
-        }
-
-        .tiktok-btn {
-            background: linear-gradient(90deg, #000000 0%, #3a0d16 100%);
-            border-left: 5px solid #FE2C55;
-            border-right: 5px solid #25F4EE;
-        }
-
-        .embed-section {
-            margin-top: 40px;
-            width: 100%;
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             overflow: hidden;
         }
-        
-        iframe {
-            border-radius: 8px;
-            width: 100%;
+
+        .link-btn i, .link-btn img {
+            font-size: 20px;
+            width: 20px;
+            margin-right: 16px;
+            text-align: center;
+        }
+
+        .link-text {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .link-arrow {
+            opacity: 0.5;
+            transition: transform 0.2s;
+        }
+
+        /* Hover Effects */
+        .link-btn:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .link-btn:hover .link-arrow {
+            transform: translateX(4px);
+            opacity: 1;
+        }
+
+        /* Brand Glows on Hover */
+        .roblox-btn:hover { box-shadow: 0 0 20px rgba(222, 53, 55, 0.15); border-color: var(--roblox); }
+        .discord-btn:hover { box-shadow: 0 0 20px rgba(88, 101, 242, 0.15); border-color: var(--discord); }
+        .wiki-btn:hover { box-shadow: 0 0 20px rgba(41, 128, 185, 0.15); border-color: var(--wiki); }
+        .x-btn:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); border-color: var(--x); }
+        .tiktok-btn:hover { box-shadow: 0 0 20px rgba(254, 44, 85, 0.15); border-color: var(--tiktok); }
+
+        .embed-section {
+            margin-top: 32px;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 24px;
+        }
+
+        .embed-section h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
         }
 
         .footer {
-            margin-top: 50px;
+            margin-top: 48px;
             font-size: 0.8rem;
-            color: #555;
+            color: var(--text-secondary);
+            opacity: 0.6;
         }
 
         .footer a {
-            color: #555;
+            color: var(--text-primary);
             text-decoration: none;
-            transition: color 0.2s;
-            font-weight: bold;
         }
 
-        .footer a:hover {
-            color: #888;
-            text-decoration: underline;
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="https://static.wikitide.net/shatteredhopesrblxwiki/thumb/b/b8/Shattered_Hopes_game_icon..png/600px-Shattered_Hopes_game_icon..png?20251206130445" alt="Shattered Hopes Logo" class="profile-img">
+        <img src="Shattered-Hopes.png" alt="Shattered Hopes Logo" class="profile-img">
         
         <h1>Shattered Hopes</h1>
         <p>Official Links & Community</p>
 
         <div class="links">
             <a href="https://www.roblox.com/groups/138766802" class="link-btn roblox-btn" target="_blank">
-                <img src="Icon.svg" alt="Roblox Icon" style="width: 24px; height: 24px;">
-                Roblox Group
+                <i class="fa-solid fa-gamepad"></i> 
+                <span class="link-text">Roblox Group</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
             </a>
 
             <a href="https://discord.gg/wCRd2gY5AE" class="link-btn discord-btn" target="_blank">
                 <i class="fa-brands fa-discord"></i>
-                Official Discord Server
+                <span class="link-text">Discord Server</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
             </a>
             
             <a href="https://shatteredhopesrblx.miraheze.org/wiki/" class="link-btn wiki-btn" target="_blank">
-                <i class="fa-solid fa-book"></i>
-                Official Wiki
+                <i class="fa-solid fa-book-open"></i>
+                <span class="link-text">Official Wiki</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
             </a>
 
             <a href="https://x.com/RealSHopes" class="link-btn x-btn" target="_blank">
                 <i class="fa-brands fa-x-twitter"></i>
-                Official X (@RealSHopes)
+                <span class="link-text">Official X (@RealSHopes)</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
             </a>
 
             <a href="https://x.com/forsakensandbox" class="link-btn x-btn" target="_blank">
                 <i class="fa-brands fa-x-twitter"></i>
-                Owner X (@forsakensandbox)
+                <span class="link-text">Owner X (@forsakensandbox)</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
             </a>
 
             <a href="https://www.tiktok.com/@forsaken.sh" class="link-btn tiktok-btn" target="_blank">
                 <i class="fa-brands fa-tiktok"></i>
-                TikTok (@forsaken.sh)
+                <span class="link-text">TikTok (@forsaken.sh)</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
             </a>
         </div>
 
@@ -195,7 +244,8 @@
         </div>
 
         <div class="footer">
-            &copy; 2026 - <a href="https://discordapp.com/users/153926011455668225" target="_blank">dogbone.wish</a> | <a href="mailto:admin@shatteredhopes.org">admin@shatteredhopes.org</a>
+            &copy; 2026 Shattered Hopes<br>
+            Design by <a href="https://discordapp.com/users/153926011455668225" target="_blank">dogbone.wish</a>
         </div>
     </div>
 
